@@ -1,0 +1,98 @@
+op">
+<element layout="borderlayout()" id="atom(ExpandedInformationWrapper)">
+<element id="atom(ExpandedInformationText)" class="DialogText" layoutpos="top" animation="alpha | s | fast" />
+<ccsyslink id="atom(ExpandedInformationLink)" contentalign="wrapleft" layoutpos="top" accessible="true"
+font="gtf(TaskDialogStyle, 6, 0)"
+foreground  = "gtc(TaskDialogStyle, 6, 0, 3803)"
+animation="alpha | s | fast" 
+/>
+</element>
+</clipper>
+</element>
+</scrollviewer>
+</element>
+<element resid="LinkArea" id="atom(LinkArea)" layoutpos="top" layout="borderlayout()" />
+<element resid="RadioButtonArea" id="atom(RadioButtonArea)" layoutpos="top" layout="borderlayout()">
+<selector id="atom(RadioButtonSelector)" layout="borderlayout()" layoutpos="top" />
+</element>
+<element resid="ProgressArea" id="atom(ProgressArea)" layout="borderlayout()" layoutpos="top">
+<CCProgressbar id="atom(ProgressBar)" layoutpos="top" active="inactive"/>
+</element>
+<ccpushbutton resid="commandbutton" class="CommandButton"/>
+<CCCommandLink resid="CommandLink" class="CommandLink" layoutpos="top"/>
+<CCRadioButton 
+transparent  =   "true" 
+resid        =   "RadioButton" 
+class        =   "RadioButton" 
+layoutpos    =   "top"
+shortcut     =   "auto"
+font         =   "gtf(TaskDialogStyle, 21, 0)"
+foreground   =   "gtc(TaskDialogStyle, 21, 0, 3803)"
+autogrouping =  "false"
+/>
+<element resid="ExpandoArea" layout="borderlayout()" layoutpos="top">
+<expandobuttonglyph resid="ExpandoButton" id="atom(ExpandoButton)" layout="borderlayout()" layoutpos="top">
+<button id="atom(ExpandoButtonWrapper)" class="ImageAlignmentWrapper" layout="verticalflowlayout(0,2,0)" layoutpos="left" active="inactive">
+<button id="atom(ExpandoButtonImage)" layoutpos="top" active="inactive"/>
+</button>
+<element id="atom(ExpandoButtonText)" layoutpos="top" layout="filllayout()">
+<element layout="verticalflowlayout()">
+<element id="atom(ExpandoTextExpanded)"/>
+</element>
+<element layout="verticalflowlayout()">
+<element id="atom(ExpandoTextCollapsed)"/>
+</element>
+</element>
+</expandobuttonglyph>
+</element>
+<element resid="VerificationArea" id="atom(VerificationArea)" layout="borderlayout()" layoutpos="top">
+<checkboxglyph resid="VerificationCheckBox" id="atom(VerificationCheckBox)" layout="borderlayout()" layoutpos="top">
+<button class="ImageAlignmentWrapper" layout="verticalflowlayout(0,2,0)" layoutpos="left" Width="20rp" active="inactive">
+<button id="atom(VerificationCheckBoxBox)" class="CheckBox" sheet="common" layoutpos="top" accessible="false" active="inactive"/>
+</button>
+<element id="atom(VerificationText)" layoutpos="left"/>
+</checkboxglyph>
+</element>
+<element resid="ButtonArea" id="atom(ButtonArea)" layout="flowlayout()" layoutpos="right" contentalign="wrapright | pathellipsis | wordellipsis"/>
+<element resid="Separator" id="atom(Separator)" layoutpos="top" layout="filllayout()">
+<element id="atom(SeparatorLine)"/>
+</element>
+<element resid="FootnoteArea" id="atom(FootnoteArea)" layoutpos="top" layout="borderlayout()">
+<element class="ImageAlignmentWrapper" layout="verticalflowlayout(0,2,0)" layoutpos="left">
+<element id="atom(FootnoteIcon)"/>
+</element>
+<element id="atom(FootnoteText)" class="DialogText" layoutpos="top"/>
+<ccsyslink layoutpos="top" id="atom(FootnoteTextLink)" contentalign="wrapleft" accessible="true"
+font="gtf(TaskDialogStyle, 15, 0)" 
+foreground="gtc(TaskDialogStyle, 15, 0, 3803)"/>
+</element>
+<element resid="ExpandedFooterArea" id="atom(ExpandedFooterArea)" layoutpos="top" layout="borderlayout()">
+<clipper id="atom(FooterClipper)" layoutpos="top">
+<element layout="borderlayout()">
+<element layoutpos="top" id="atom(ExpandedFooterText)" class="DialogText" />
+<ccsyslink layoutpos="top" id="atom(ExpandedFooterTextLink)" contentalign="wrapleft" accessible="true"
+font="gtf(TaskDialogStyle, 18, 0)" 
+foreground="gtc(TaskDialogStyle, 4, 0, 3803)"/>
+</element>
+</clipper>
+</element>
+<stylesheets>
+<style resid="TaskDialog">
+<if class="DialogText">
+<element
+overhang            = "false"
+contentalign        = "wrapleft | pathellipsis | wordellipsis"
+/>
+</if>
+<if id="atom(DialogContent)">
+<element
+background          = "themeable(dtb(TaskDialog, 1, 0), threedface)"
+/>
+</if>
+<if id="atom(PrimaryPanel)">
+<element
+padding             = "themeable(gtmar(TaskDialog, 1, 0, 3602), rect(10rp,10rp,10rp,10rp))"
+background          = "themeable(dtb(TaskDialog, 1, 0), threedface)"
+/>
+</if>
+<if id="atom(MainInstruct
